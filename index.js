@@ -10,6 +10,7 @@ const db=require('./config/mongoose')
 // use express router
 app.use('/',require('./routes/index'));
 
+// Start the server
 app.listen(port,function(err){
     if (err) {
         console.log('Error in running server : ',err)

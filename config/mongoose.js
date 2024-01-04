@@ -5,7 +5,8 @@ main().catch(function(err){
 })
 // setup the mongoose connection
 async function main (){
-    mongoose.connect('mongodb://127.0.0.1:27017/ecommerce_api_developmen')
+    mongoose.connect(process.env.ecommerce_mogourl)
+    
 }
 
 // aquire the connection

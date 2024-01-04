@@ -92,7 +92,7 @@ module.exports.destroy=async function(req,res){
 module.exports.update_quantity=async function(req,res){
     try {
 
-        if (req.params.id!='' && req.query.number!='' && req.query.number!=0) {
+        if (req.params.id!='' && req.query.number!='' && req.query.number!=0) { //checking param and query
 
             await Product.findByIdAndUpdate(req.params.id,{ quantity: req.query.number });
             let product=await Product.findById(req.params.id)
